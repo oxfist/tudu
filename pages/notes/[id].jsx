@@ -1,7 +1,10 @@
+import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import React from 'react'
 
 const Page = () => {
+  const router = useRouter()
+
   const notesArray = new Array(15).fill(1)
   const notes = notesArray.map((_, i) => ({
     id: i,
@@ -12,11 +15,7 @@ const Page = () => {
     <div>
       <h1>Notes</h1>
       <div>
-        <Link href="/notes">
-          <a>
-            <strong>Back to all Notes</strong>
-          </a>
-        </Link>
+        <button onClick={() => router.push('/notes')}>Back to all Notes</button>
       </div>
       {notes.map((note) => (
         <div key={note.id}>
