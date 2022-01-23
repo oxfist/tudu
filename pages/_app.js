@@ -1,12 +1,14 @@
 import { ThemeProvider } from 'theme-ui'
 import theme from '../theme'
+import Nav from '../src/components/nav'
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <div>
+        <Nav />
+        <Component {...pageProps} />
+      </div>
     </ThemeProvider>
   )
 }
-
-export default MyApp
