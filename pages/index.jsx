@@ -1,7 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from 'theme-ui'
-
 const Page = () => (
   <div sx={{ height: `calc(100vh - 60px)` }}>
     <div
