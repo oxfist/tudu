@@ -8,7 +8,7 @@ const Page = () => (
         height: '100%',
       }}
     >
-      <h1 sx={{ fontSize: 8, my: 0 }}>
+      <h1 sx={{ fontSize: 8, textAlign: 'center' }}>
         This is an awesome note taking app 🤩!
       </h1>
     </div>
