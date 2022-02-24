@@ -21,7 +21,7 @@ const Nav = () => (
       }}
     >
       <Link href="/">
-        <a sx={{ fontWeight: 'bold', fontSize: 4, cursor: 'pointer' }}>Noter</a>
+        <a sx={{ fontWeight: 'bold', fontSize: 4, cursor: 'pointer' }}>tudu</a>
       </Link>
 
       <Link href="/notes">
