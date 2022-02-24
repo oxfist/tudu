@@ -6,7 +6,10 @@ const NotePage = ({ note }) => {
 
   return (
     <div sx={{ variant: 'containers.page' }}>
-      <h1>Note: {note.title}</h1>
+      <section>
+        <h1>Note: {note.title}</h1>
+        <p>{note.text}</p>
+      </section>
     </div>
   )
 }
