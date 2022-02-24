@@ -1,10 +1,6 @@
 import Link from 'next/link'
 
-const Page = () => {
-  const notes = new Array(15)
-    .fill(1)
-    .map((_, i) => ({ id: i, title: `This is my note ${i}` }))
-
+const Page = ({ notes }) => {
   return (
     <div sx={{ variant: 'containers.page' }}>
       <h1>My Notes</h1>
@@ -31,6 +27,15 @@ const Page = () => {
       </div>
     </div>
   )
+}
+
+export async function getServerSideProps() {
+  const notesResponse = await fetch(`${process.env.SERVER_URL}/api/notes`)
+  const { data: notesData } = await notesResponse.json()
+
+  return {
+    props: { notes: notesData },
+  }
 }
 
 export default Page
