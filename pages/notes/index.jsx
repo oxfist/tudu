@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const Page = ({ notes }) => {
+const NotesPage = ({ notes }) => {
   return (
     <div sx={{ variant: 'containers.page' }}>
       <h1>My Notes</h1>
@@ -38,4 +38,4 @@ export async function getServerSideProps() {
   }
 }
 
-export default Page
+export default NotesPage
